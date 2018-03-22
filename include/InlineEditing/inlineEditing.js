@@ -385,9 +385,9 @@ function getInputValue(field,type){
                 break;
             case 'bool':
                 if($('#'+ field).is(':checked')){
-                    return "on";
+                    return 1;
                 }else{
-                    return "off";
+                    return 0;
                 }
                 break;
             case 'radioenum':
