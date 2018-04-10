@@ -777,7 +777,8 @@ class UserTest extends \Codeception\Test\Unit
 
         //test with contacts module
         $contact = new Contact();
-        $contact->name = "test";
+        // Because contact is a person Name will auto populate from first name and last name, So We need set value for first_name or last name to test insteard set for name
+        $contact->first_name = "test";
 
         /** @var SugarEmailAddress $emailAddress*/
         $emailAddress =& $contact->emailAddress;
@@ -814,7 +815,7 @@ class UserTest extends \Codeception\Test\Unit
 
         //test with contacts module
         $contact = new Contact();
-        $contact->name = "test";
+        $contact->first_name = "test";
 
         $expected =
             '<a href="javascript:void(0);"'
